@@ -1,8 +1,20 @@
 const container = document.getElementById("container");
 const title = document.querySelector("h1");
+let color = "#000000";
 
-function randomColor() {
-    return '#'+Math.floor(Math.random()*16777215).toString(16);
+function chooseColor(inputColor) {
+    color = inputColor;
+}
+
+function returnColor() {
+    if (color == "rainbow") {
+        return '#'+Math.floor(Math.random()*16777215).toString(16);
+    } else if (color == "eraser") {
+        return "#ffffff";
+    } else {
+        return "#000000";
+    }
+    
 }
 
 function createGrid(rows, cols) {
@@ -19,9 +31,10 @@ function drawGrid() {
 
     gridItems.forEach((gridItem) => {
         gridItem.addEventListener("mouseover", () => {
-            gridItem.style.backgroundColor = randomColor();
+            gridItem.style.backgroundColor = returnColor();
         });
     });
+    console.log(returnColor());
 }
 
 function reset() {

@@ -4,8 +4,9 @@
 }
 
 body {
-    background-color: #1c1c1c;
+    background-color: #fff;
 }
+
 #container {
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
@@ -18,16 +19,16 @@ body {
     padding: 0.1em;
 }
 
-#new-sketch {
+#new-sketch, #color-picker-black, #color-picker-rainbow, #color-picker-eraser {
     font-size: 2em;
-    background-color: #88000e;
+    background-color: #b5131e;
     border: none;
     border-radius: 15px;
-    color: #E7DBCF;
+    color: #fff;
     padding: 0.4em;
     margin-bottom: 0.3em;
 }
 
-#new-sketch:hover {
+#new-sketch:hover, #color-picker-black:hover, #color-picker-rainbow:hover, #color-picker-eraser:hover{
     cursor: pointer;
 }
