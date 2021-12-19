@@ -36,7 +36,7 @@ function reset() {
     } while (Number.isInteger(rowsInput) == false || (rowsInput > 100) || (rowsInput < 1));
 
     do {
-        colsInput = parseInt(prompt("Please enter how many rows you want (must be between 1-100)"));
+        colsInput = parseInt(prompt("Please enter how many columns you want (must be between 1-100)"));
     } while (Number.isInteger(colsInput) == false || (colsInput > 100) || (colsInput < 1));
 
     createGrid(rowsInput, colsInput);
